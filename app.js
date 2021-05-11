@@ -4,7 +4,7 @@ d3.json("data/samples.json").then((data) => {
     x: data.otu_ids,
     y: data.sample_values.map(val => Math.sqrt(val)),
     type: "bar",
-    name: "Cancer Survival",
+    // name: "Cancer Survival",
     boxpoints: "all"
   };
 
@@ -12,12 +12,12 @@ d3.json("data/samples.json").then((data) => {
   var data = [trace1];
 
   // Define the plot layout
-  var layout = {
-    title: "Square Root of Cancer Survival by Organ",
-    xaxis: { title: "Organ" },
-    yaxis: { title: "Square Root of Survival" }
-  };
+  // var layout = {
+  //   title: "Square Root of Cancer Survival by Organ",
+  //   xaxis: { title: "Organ" },
+  //   yaxis: { title: "Square Root of Survival" }
+  // };
 
   // Plot the chart to a div tag with id "plot"
-  Plotly.newPlot("plot", data, layout);
+  Plotly.newPlot("bar", data, layout);
 });
